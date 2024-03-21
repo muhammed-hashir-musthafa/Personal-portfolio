@@ -1,0 +1,1376 @@
+.body-tag{
+    background-color: #000000;
+}
+
+.img-header{
+    margin-top: 2em;
+    width: 2.2em;
+    background-color: rgb(30, 28, 28);
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    padding: .4em;
+}
+
+.side-bar{
+    background: #101010;
+    width: 4em;
+    height: 100%;
+    text-align: center;
+    writing-mode:vertical-lr;
+    align-items: center;
+    font-family: nexa;
+    border-right: 1px solid transparent;
+    top: 0;
+    position: fixed;
+    left: 0;
+    display: flex;
+    overflow: hidden;
+    
+
+    animation: slideIn .9s ease;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: slideIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.body{
+    border: 0;
+}
+
+.navbar-link{
+    padding-top: 1em;
+    margin-top: 1em;
+    opacity: .5;    
+    height: 5.5em; 
+    color: #ffffff;
+    width: 4em; 
+    align-items: center;
+    display: flex;
+}
+
+.navbar-link2{
+    padding-top: .5em;
+    margin-top: 1em;
+    opacity: .5;    
+    height: 6em; 
+    color: #ffffff;
+    width: 4em; 
+    align-items: center;
+    display: flex;
+}
+
+.navbar-nav{
+    width: 4em; 
+    align-items: center ;
+    justify-content: center;
+    display: flex;
+    margin-top: 1em;
+}
+
+.navbar-link:hover{
+    color: #ffff;   
+    opacity: 100;
+    border-right: 2px solid #0aff9d ;
+    background: #252525;   
+    text-decoration: none;  
+}
+
+.navbar-link2:hover{
+    color: #ffff;   
+    opacity: 100;
+    border-right: 2px solid #0aff9d ;
+    background: #252525;   
+    text-decoration: none;  
+}
+
+.header{
+    align-items: center;
+     display: flex;
+     justify-content: space-between;
+     backdrop-filter: blur(12px);
+     z-index: 101;
+     height: 5em;
+     padding-right: 1.8em;
+     padding-left: 1.5em;
+     margin-left: 4em;
+     position: sticky;
+     top: 0;
+         
+    animation: headerIn .9s ease;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: headerIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: .3s;
+}
+
+@keyframes headerIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.header-icons{  
+
+    backdrop-filter: blur(12px);
+    padding-left: 1em;
+}
+
+.main-body{
+    margin-left: 4em;
+    max-width: 2000px;
+    position: relative;
+    overflow: hidden;
+    padding: 5.1em;
+    padding-top: 10em;
+    padding-left: 12em;
+    padding-bottom: 18em;
+    z-index: 46;
+} 
+
+.main-content{
+    width: fit-content;
+    position: relative; 
+    z-index: 2;
+}
+
+.title{
+    font-size: 5.5em;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    line-height: 1.1;
+    text-align: center;
+     
+    animation: TitleIn .9s ease;
+    animation-duration: 1.8s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: TitleIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: 0s;
+}
+
+@keyframes TitleIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+    100% {
+        opacity: 1;  
+    } 
+}
+
+.title span{
+    color: #0aff9d;
+}
+
+.resume-box{
+    background: transparent;
+    border: 1px solid #0aff9d;
+    border-radius: 4px;
+    color: #0aff9d;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    padding-left:1em;
+    padding-right: 1em;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    font-weight: 400;
+    font-size: 1.2em;
+    font-family: Nexa;
+}
+
+.resume-box a{
+ text-decoration: none;
+ color: #06da85;
+}
+
+.resume-box :hover{
+    font-weight: 900;
+    color: #0aff9d;
+}
+
+.subtitle{
+    font-size: 2.5em;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+    text-align: left;
+    
+    animation: SubTitleIn .9s ease;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: SubTitleIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: 0s;
+}
+
+@keyframes SubTitleIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.subtitle span{
+    color: #0aff9d;
+    font-weight: 700;           
+}
+
+.description{
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    line-height: 1.8;
+    font-style: light;
+    text-align: left;
+    max-width: 700px;
+    position: relative;
+    font-family: nexa;
+
+    animation: DiscriptionIn .9s ease;
+    animation-duration: 1.3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: DiscriptionIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: 0s;
+}
+
+@keyframes DiscriptionIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.Contact-button{
+    color: #000000;
+    background: #0aff9d;
+    border: 1px solid #0aff9d ;
+    font-weight: bolder;
+    border-radius: 5px;
+    font-family: nexa;
+    font-weight: 400;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    font-size: 1.2em;
+
+    animation: ContactIn .9s ease;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: ContactIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: 0s;
+}
+
+
+@keyframes ContactIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+    100% {
+        opacity: 1;
+    }  
+}           
+.Contact-button a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.Contact-button:hover{
+    background: #01b472;   
+    border: 1px solid #01b472 ; 
+}
+
+.Contact-button:hover a{
+    color: #ffffff;
+}   
+
+.About-title{
+    color: #ffff;
+    font-weight: 900;
+    font-size: 3.5em;
+    margin-left: 5.8em;
+    padding-top: .5em;
+
+    animation: AboutTitleIn .9s ease;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: AboutTitleIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: 0s;
+}
+
+@keyframes AboutTitleIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+    100% {
+        opacity: 1;
+   
+    }
+}
+
+.About-title span{
+    color: #0aff9d;
+    font-size: 2em;
+    font-weight: 900;
+    margin-left: -.13em;
+    z-index: 65;
+}
+
+.text-about{
+    color: #ffff;
+    font-weight: 200;
+    margin-left: 2em;
+    padding: 15em;
+    padding-right: 20em;
+    padding-top: 0.2em;
+    padding-bottom: 1em;
+    font-size: 1.2em;
+    text-align: justify;
+    width: fit-content;
+ 
+    animation: AboutTextIn .9s ease;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: AboutTextIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: .1s;
+}
+
+@keyframes AboutTextIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+    75%{
+        opacity: 4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.about-links{
+    color: #0aff9d;
+    font-weight: 600;
+    margin-left: 17em;
+    padding-right: 1.2em;
+    font-size: 1.2em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: fit-content;
+    float: left;
+    margin-top: 1em;
+}
+
+.about-links span{
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin-left: .9em;
+}
+
+.about-icons{
+    width: 2.2em;
+    opacity: .5;
+}
+
+.About-main-links{
+    padding-bottom: 7em;
+    align-items: center;
+    display: flex;
+
+    animation: AboutLinkstIn .9s ease;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: AboutLinkstIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: .1s;
+}
+
+@keyframes AboutLinkstIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.About-main-links :hover{
+    color: #0aff9d;
+    opacity: 100%;
+}
+
+.about-icons:hover{
+        color: #0aff9d;
+        opacity: 100%;
+}
+
+.Contact{
+    color: #ffff;
+    font-weight: 900;
+    font-size: 6em;
+    text-align: center;
+    padding-top: 3em; ; 
+    
+    animation: contactMainIn .9s ease;
+    animation-delay: 0s;
+    animation-name: contactMainIn;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: none;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+}
+
+@keyframes contactMainIn{
+    0%{
+        transform: translateX(-70px);
+        opacity: 0;
+    }
+    100%{
+    }
+}           
+
+.Contact span{
+    font-weight: 900;
+    margin-left: -.28em;
+    color: #0aff9d;
+}
+
+.contact-info{
+    color: #ffff;
+    font-weight: 300;
+    font-size: 1.4em;
+    text-align: center;
+    padding-bottom: .5em;  
+    
+    
+    animation: contactIn .9s ease;
+    animation-delay: 0s;
+    animation-name: contactIn;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: none;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+}
+
+@keyframes contactIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+    }
+}
+
+.contact-info a{         
+    font-weight: 600;
+    margin-left: -12px;
+    color: #0aff9d;
+
+}
+
+.contact-mail{
+    
+    color: #ffff;
+    margin-top: -.5em; 
+
+    animation: contactIn .9s ease;
+    animation-delay: 0s;
+    animation-name: contactIn;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: none;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+}
+
+@keyframes contactIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+    }
+} 
+
+.contact-mail-info{
+    font-size: 1.5em;
+    font-family: nexa;
+    margin-left: 1.8em;   
+    margin-top: -1.3em;
+    color: #ffffff;
+    width: fit-content;
+    gap: 1em;
+}
+
+.contact-mail:hover .contact-image {
+    color: #0aff9d;
+    opacity: .8;
+}
+
+.contact-mail:hover .contact-mail-info {
+    color: #0aff9d;
+    text-decoration: none;
+}
+
+.contact-image{
+    color: #ffff;   
+    opacity: .5;    
+    margin-left: .5em;
+}
+
+.contact-image3{    
+    color: #ffff;   
+    opacity: .3;    
+    margin-left: 1em;
+}
+
+.contact-image2{
+    color: #ffff;   
+    opacity: .5;
+    margin-left: 0em;
+}
+
+.header-icons :hover{
+    color: #0aff9d;
+    opacity: 100%;
+}
+
+.contact-main{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 7em;
+}
+
+.contact-mail a{
+    text-decoration: none;
+}
+
+.Education-title{
+    color: #ffff;
+    margin-left: 5.3em;
+    font-weight: 900;
+    font-size: 3.9em;
+    padding-top: 1.8em;
+    padding-bottom: 1em;
+
+    animation: EducationIn .9s ease;
+    animation-duration: 1.5s;
+    animation-name : EducationIn ;
+    animation-delay: 0s;
+    animation-fill-mode: none;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-timeline: auto;
+    animation-play-state: running;
+    animation-range-start: normal;
+    animation-range-end: normal;
+}
+
+@keyframes EducationIn {
+    0%{
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
+.Education-title span{
+    color: #0aff9d;
+    font-size: 1.3em;
+    font-weight: 900;
+    margin-left: -.23em;
+}           
+.Institution-name{
+    padding-left: 16em;
+    font-size: 1.3em;
+    font-weight: bold;
+    float: left;
+
+    animation: institutionNameIn .9s ease;
+    animation-name: institutionNameIn;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-timeline: auto;
+}
+
+@keyframes institutionNameIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    } 
+}
+
+.college{
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    padding: 1em;
+}
+
+.duration{
+    padding-left: 59em;
+    font-size: 1.2em;
+
+    animation: durationIn .9s ease;
+    animation-duration: 3.5s;
+    animation-name: durationIn;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal ;
+    animation-fill-mode: none;
+    animation-range-start: normal;
+    animation-range-end: normal ;
+    animation-play-state: running;
+    animation-timeline: auto;
+}
+
+@keyframes durationIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+.course{
+    padding-left: 14em;
+    font-weight: bold;
+    color: #0aff9d;
+    font-size: 1.5em;
+    float: left;
+    margin-top:  -.6em;
+
+    animation: courseIn .9s ease;
+    animation-name: courseIn;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-timeline: auto;
+}
+
+@keyframes courseIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    } 
+}
+
+.place{
+    font-size: 1.2em;
+    padding-left: 59em;
+    margin-top:  -.6em;
+
+    animation: placeIn .9s ease;
+    animation-duration: 3.5s;
+    animation-name: placeIn;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal ;
+    animation-fill-mode: none;
+    animation-range-start: normal;
+    animation-range-end: normal ;
+    animation-play-state: running;
+    animation-timeline: auto;
+}
+
+@keyframes placeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }  
+}
+
+.college span{
+    font-size: .7em;
+    color: #ffffff;
+    margin-top: -2.2em;
+    margin-left: .8em;
+    display: flex;
+}           
+
+.college span6{
+    font-size: .68em;
+    color: #ffffff;
+    margin-top: -1.5em;
+    margin-left: 4.7em;
+    display: flex;
+}  
+
+.college span3{
+    font-size: .68em;
+    color: #ffffff;
+    margin-top: -1.5em;
+    margin-left: 3.9em;
+    display: flex;
+}           
+
+
+.college span4{
+    font-size: .7em;
+    color: #ffffff;
+    margin-top: -2.2em;
+    margin-left: .8em;
+    display: flex;
+}           
+
+.college span5{
+    font-size: .7em;
+    color: #ffffff;
+    margin-top: -2.2em;
+    margin-left: 5.5em;
+    display: flex;
+}           
+
+.section-line {
+    height: .5px; 
+    opacity: .3;
+    width: 95.8%;
+    background-color: #afafaf;
+    display: flex;
+    gap: 1em;
+   margin-left:  4em;
+      
+}
+
+.education{
+    padding-bottom: 6em;
+}
+
+.Skill-title{
+    color: #ffff;
+    margin-left: 5.3em;
+    font-weight: 900;
+    font-size: 3.9em;
+    padding-top: 1.8em;
+    padding-bottom: .5em;
+
+    animation: SkillTitleIn .9s ease;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: SkillTitleIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: 0s;
+}
+
+
+@keyframes SkillTitleIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+    100% {
+        opacity: 1;
+    }   
+
+} 
+
+
+.Skill-title span{
+    color: #0aff9d;
+    font-size: 1.3em;
+    font-weight: 900;
+    margin-left: -.23em;
+}           
+
+.skills{
+    color: #ffffff;
+    font-size: 1.5em;
+    align-items: center;
+    text-align: center;
+    font-weight: 900;
+    font-family: nexa;
+    display: flex;
+    margin-left: 8em;
+    padding-bottom: .8em;
+}
+
+.skills span{
+    margin-right:  14em;
+    margin-left: 6.2em;
+
+    animation: SkillsTextIn .9s ease;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: SkillsTextIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: 0s;
+}
+
+
+@keyframes SkillsTextIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.skill-box{
+    background: #777474;
+    width: .8em;
+    height: .8em;
+    border-radius: 5px;
+    opacity: .5;
+    display: flex;
+    justify-content: center;        
+    align-items: center;
+    margin-left:  .5em; 
+
+    animation: skillBoxIn .9s ease;
+    animation-delay: .1s;
+    animation-name: skillBoxIn;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: none;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+}
+
+@keyframes skillBoxIn{
+    0%{
+        transform: translateX(-70px);
+        opacity: 0;
+    }
+    100%{
+    }
+    
+}
+
+
+
+.skill-box2{
+    background: #777474;
+    width: .8em;
+    height: .8em;
+    border-radius: 5px;
+    opacity: .2;
+    display: flex;
+    justify-content: center;        
+    align-items: center;
+    margin-left:  .5em;
+
+    animation: skillBoxIn .9s ease;
+    animation-delay: .1s;
+    animation-name: skillBoxIn;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: none;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+}
+
+.skill-box3{
+    background: #777474;
+    width: .8em;
+    height: .8em;
+    border-radius: 5px;
+    opacity: .35;
+    display: flex;
+    justify-content: center;        
+    align-items: center;
+    margin-left:  .5em;
+
+    animation: skillBoxIn .9s ease;
+    animation-delay: .1s;
+    animation-name: skillBoxIn;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: none;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+}
+
+.skills span2{
+    font-size: .8em;
+    opacity: .5;
+     margin-left: 1em;
+     animation: counter 5s  forwards alternate ease-in-out;
+     counter-reset: num var(--num);
+}
+
+ @property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+span2::after {
+    content: counter(num);
+}
+
+@keyframes counter {
+    from
+     {
+        --num: 0;
+    }
+    to 
+    {
+         --num: 68;
+    }
+}
+
+.skills span2-1{
+    font-size: .8em;
+    opacity: .5;
+    margin-left: 1em;
+    animation: counter1 5s  forwards alternate ease-in-out;
+    counter-reset: num1 var(--num1);
+}
+
+ @property --num1 {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+span2-1::after {
+    content: counter(num1);
+}
+
+@keyframes counter1 {
+    from
+     {
+        --num1: 0;
+    }
+    to 
+    {
+         --num1: 50;
+    }
+}
+
+.skills span2-2{
+    font-size: .8em;
+    opacity: .5;
+     margin-left: 1em;
+     animation: counter2 5s  forwards alternate ease-in-out;
+     counter-reset: num2 var(--num2);
+}
+
+ @property --num2 {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+span2-2::after {
+    content: counter(num2);
+}
+
+@keyframes counter2 {
+    from
+     {
+        --num2: 0;
+    }
+    to 
+    {
+         --num2: 45;
+    }
+}
+
+.skills span2-3{
+    font-size: .8em;
+    opacity: .5;
+     margin-left: 1em;
+     animation: counter3 5s  forwards alternate ease-in-out;
+     counter-reset: num3 var(--num3);
+}
+
+ @property --num3{
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+span2-3::after {
+    content: counter(num3);
+}
+
+@keyframes counter3 {
+    from
+     {
+        --num3: 0;
+    }
+    to 
+    {
+         --num3: 89;
+    }
+}
+.skills span2-4{
+    font-size: .8em;
+    opacity: .5;
+     margin-left: 1em;
+     animation: counter4 5s  forwards alternate ease-in-out;
+     counter-reset: num4 var(--num4);
+}
+
+ @property --num4{
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+span2-4::after {
+    content: counter(num4);
+}
+
+@keyframes counter4 {
+    from
+     {
+        --num4: 0;
+    }
+    to 
+    {
+         --num4: 83;
+    }
+}
+
+.skills span2-5{
+    font-size: .8em;
+    opacity: .5;
+     margin-left: 1em;
+     animation: counter5 5s  forwards alternate ease-in-out;
+     counter-reset: num5 var(--num5);
+}
+
+ @property --num5 {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+span2-5::after {
+    content: counter(num5);
+}
+
+@keyframes counter5 {
+    from
+     {
+        --num5: 0;
+    }
+    to 
+    {
+        --num5: 94;
+    }
+}
+
+.skills span2-6{
+    font-size: .8em;
+    opacity: .5;
+     margin-left: 1em;
+     animation: counter6 5s  forwards alternate ease-in-out;
+     counter-reset: num6 var(--num6);
+}
+
+ @property --num6 {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+span2-6::after {
+    content: counter(num6);
+}
+
+@keyframes counter6 {
+    from
+     {
+        --num6: 0;
+    }
+    to 
+    {
+         --num6: 96;
+    }
+}
+
+ .skills span1{
+    margin-left: 6.1em;
+    padding-right: 14.9em;
+
+    animation: SkillsTextIn .9s ease;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: SkillsTextIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: 0s;
+}
+
+@keyframes SkillsTextIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;  
+    }
+}
+
+  .skills span3{
+    margin-left: 6em;
+    padding-right: 11.78em;
+     
+    animation: SkillsTextIn .9s ease;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: SkillsTextIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: 0s;
+}
+
+@keyframes SkillsTextIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+ }
+ 
+ .skills span4{
+    margin-left: 6em;   
+    padding-right: 10.8em;    
+
+    animation: SkillsTextIn .9s ease;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: SkillsTextIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: 0s;
+}
+
+
+@keyframes SkillsTextIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+ }
+
+ .main-skills{
+    padding-bottom: 6em;
+ }
+
+ .skills span5{
+    margin-left: 6em;
+    padding-right: 7.15em; 
+
+    animation: SkillsTextIn .9s ease;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: SkillsTextIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: 0s;
+}
+
+@keyframes SkillsTextIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+ }
+
+ .skills span6{
+    margin-left: 6em;
+    padding-right: 10em;
+
+    animation: SkillsTextIn .9s ease;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: SkillsTextIn;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-delay: 0s;
+}
+
+@keyframes SkillsTextIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+ }
+
+ .skills span7{
+    font-size: .8em;
+    opacity: .5;
+    margin-left: .1em;
+ }
