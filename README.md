@@ -1,5 +1,5 @@
-# Personal Web Site 
+# Personal Portfolio
 
-It's my unresponsive personal web site 
+It's my unresponsive personal Portfolio
 
- Demo : https://muhammed-hashir-musthafa.github.io/Personal-Web-Site/
+https://muhammed-hashir-musthafa.github.io/Personal-portfolio/
