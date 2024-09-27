@@ -1,3 +1,7 @@
+html {
+  width: fit-content;
+}
+
 .body-tag {
   background-color: #000000;
 }
@@ -53,21 +57,11 @@ body ::selection {
     opacity: 0;
     transform: translateX(-70px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-.body {
-  border: 0;
-  z-index: -1; /* Ensure it stays in the background */
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .navbar-link {
@@ -128,6 +122,9 @@ body ::selection {
   margin-left: 4em;
   position: sticky;
   top: 0;
+  margin-top: 15px;
+
+  padding: 1em 0;
 
   animation: headerIn 0.9s ease;
   animation-duration: 0.9s;
@@ -148,25 +145,85 @@ body ::selection {
     opacity: 0;
     transform: translateY(-70px);
   }
+
   100% {
     opacity: 1;
   }
 }
 
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
 .header-icons {
-  backdrop-filter: blur(12px);
-  padding-left: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.social-icons .icon {
+  margin-right: 15px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+
+.resume-box {
+  background: transparent;
+  border: 1px solid #0aff9d;
+  border-radius: 4px;
+  color: #0aff9d;
+  cursor: pointer;
+  padding: 0.4em 1em;
+  font-weight: 400;
+  font-size: 1.2em;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+
+.resume-box a {
+  text-decoration: none;
+  color: #06da85;
+}
+
+
+.resume-box:hover {
+  font-weight: 900;
+  color: #0aff9d;
+}
+
+
+@media (max-width: 576px) {
+  .header-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-icons {
+    margin-bottom: 10px;
+  }
+
+  .resume-box {
+    margin-top: 10px;
+  }
 }
 
 .main-body {
-  margin-left: 4em;
+  margin: 0 4em;
   max-width: 2000px;
   position: relative;
   overflow: hidden;
-  padding: 5.1em;
-  padding-top: 10em;
-  padding-left: 12em;
-  padding-bottom: 18em;
+  padding: 0 5.1em 0 5.1em;
   z-index: 46;
 }
 
@@ -177,24 +234,12 @@ body ::selection {
 }
 
 .title {
-  font-size: 5.5em;
   font-weight: 900;
   color: rgb(255, 255, 255);
   line-height: 1.1;
+  font-size: 5.5em;
   text-align: center;
-
   animation: TitleIn 0.9s ease;
-  animation-duration: 1.8s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: TitleIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0s;
 }
 
 @keyframes TitleIn {
@@ -202,6 +247,7 @@ body ::selection {
     opacity: 0;
     transform: translateY(-70px);
   }
+
   100% {
     opacity: 1;
   }
@@ -211,54 +257,13 @@ body ::selection {
   color: #0aff9d;
 }
 
-.resume-box {
-  background: transparent;
-  border: 1px solid #0aff9d;
-  border-radius: 4px;
-  color: #0aff9d;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
-  position: relative;
-  z-index: 3;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.4em;
-  padding-bottom: 0.4em;
-  font-weight: 400;
-  font-size: 1.2em;
-  font-family: Nexa;
-}
-
-.resume-box a {
-  text-decoration: none;
-  color: #06da85;
-}
-
-.resume-box :hover {
-  font-weight: 900;
-  color: #0aff9d;
-}
-
 .subtitle {
-  font-size: 2.5em;
   font-weight: 300;
+  font-size: 2em;
   color: rgb(255, 255, 255);
   line-height: 1.5;
   text-align: left;
-
   animation: SubTitleIn 0.9s ease;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: SubTitleIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0s;
 }
 
 @keyframes SubTitleIn {
@@ -266,6 +271,7 @@ body ::selection {
     opacity: 0;
     transform: translateY(-70px);
   }
+
   100% {
     opacity: 1;
   }
@@ -277,27 +283,13 @@ body ::selection {
 }
 
 .description {
-  font-size: 1em;
   color: rgb(255, 255, 255);
   line-height: 1.8;
-  font-style: light;
   text-align: left;
-  max-width: 700px;
+  font-size: 0.9em;
+  max-width: 100%;
   position: relative;
-  font-family: nexa;
-
   animation: DiscriptionIn 0.9s ease;
-  animation-duration: 1.3s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: DiscriptionIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0s;
 }
 
 @keyframes DiscriptionIn {
@@ -305,8 +297,35 @@ body ::selection {
     opacity: 0;
     transform: translateY(-70px);
   }
+
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-body {
+    margin: 0 2em;
+    padding: 3em;
+  }
+
+  .Contact-button {
+    font-size: 1em;
+    padding: 0.6em 1.2em;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 2.5em;
+  }
+
+  .subtitle {
+    font-size: 1.5em;
+  }
+
+  .description {
+    font-size: 0.8em;
   }
 }
 
@@ -343,10 +362,12 @@ body ::selection {
     opacity: 0;
     transform: translateY(-70px);
   }
+
   100% {
     opacity: 1;
   }
 }
+
 .Contact-button a {
   color: #000000;
   text-decoration: none;
@@ -365,21 +386,10 @@ body ::selection {
   color: #ffff;
   font-weight: 900;
   font-size: 3.5em;
-  margin-left: 5.8em;
   padding-top: 0.5em;
-
   animation: AboutTitleIn 0.9s ease;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: AboutTitleIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0s;
+  text-align: left;
+  margin-left: 8%;
 }
 
 @keyframes AboutTitleIn {
@@ -387,6 +397,7 @@ body ::selection {
     opacity: 0;
     transform: translateX(-70px);
   }
+
   100% {
     opacity: 1;
   }
@@ -397,33 +408,22 @@ body ::selection {
   font-size: 2em;
   font-weight: 900;
   margin-left: -0.13em;
-  z-index: 65;
+}
+
+@media (max-width: 768px) {
+  .About-title {
+    margin-left: 15%;
+  }
 }
 
 .text-about {
   color: #ffff;
   font-weight: 200;
-  margin-left: 2em;
-  padding: 15em;
-  padding-right: 20em;
-  padding-top: 0.2em;
-  padding-bottom: 1em;
+  margin: 0 2em;
+  padding: 0 2em;
   font-size: 1.2em;
   text-align: justify;
-  width: fit-content;
-
   animation: AboutTextIn 0.9s ease;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: AboutTextIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0.1s;
 }
 
 @keyframes AboutTextIn {
@@ -431,9 +431,7 @@ body ::selection {
     opacity: 0;
     transform: translateY(-70px);
   }
-  75% {
-    opacity: 4;
-  }
+
   100% {
     opacity: 1;
   }
@@ -442,74 +440,82 @@ body ::selection {
 .about-links {
   color: #0aff9d;
   font-weight: 600;
-  margin-left: 17em;
-  padding-right: 1.2em;
+  margin: 1em auto;
   font-size: 1.2em;
   text-align: center;
-  align-items: center;
-  justify-content: center;
   display: flex;
-  width: fit-content;
-  float: left;
-  margin-top: 1em;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 15%;
 }
 
 .about-links span {
   font-weight: 900;
   letter-spacing: -3px;
-  margin-left: 0.9em;
-}
-
-.about-icons {
-  width: 2.2em;
-  opacity: 0.5;
+  margin-left: 0.4em;
 }
 
 .About-main-links {
   padding-bottom: 7em;
-  align-items: center;
+}
+
+.about-all-icons {
   display: flex;
-
-  animation: AboutLinkstIn 0.9s ease;
-  animation-duration: 2.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: AboutLinkstIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0.1s;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+  opacity: 1;
 }
 
-@keyframes AboutLinkstIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-70px);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.About-main-links :hover {
+.about-all-icons :hover {
   color: #0aff9d;
   opacity: 100%;
 }
 
-.about-icons:hover {
-  color: #0aff9d;
-  opacity: 100%;
+.about-all-icons span {
+  margin: 0 5px;
+  transition: transform 0.3s;
+}
+
+.about-all-icons span:hover {
+  transform: scale(1.1);
+}
+
+
+
+@media (max-width: 768px) {
+  .about-links {
+    font-size: 1.1em;
+  }
+
+  .about-all-icons {
+    justify-content: center;
+    margin: 0 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .About-title {
+    font-size: 2.5em;
+  }
+
+  .About-title span {
+    font-size: 1.5em;
+  }
+
+  .text-about {
+    font-size: 1em;
+    padding: 0 1em;
+  }
 }
 
 .Contact {
   color: #ffff;
   font-weight: 900;
-  font-size: 6em;
   text-align: center;
-  padding-top: 3em;
+  margin-top: 5%;
+  font-size: 3.5em;
+
 
   animation: contactMainIn 0.9s ease;
   animation-delay: 0s;
@@ -530,8 +536,8 @@ body ::selection {
     transform: translateX(-70px);
     opacity: 0;
   }
-  100% {
-  }
+
+  100% {}
 }
 
 .Contact span {
@@ -565,8 +571,8 @@ body ::selection {
   0% {
     opacity: 0;
   }
-  100% {
-  }
+
+  100% {}
 }
 
 .contact-info a {
@@ -575,41 +581,6 @@ body ::selection {
   color: #0aff9d;
 }
 
-.contact-mail {
-  color: #ffff;
-  margin-top: -0.5em;
-
-  animation: contactIn 0.9s ease;
-  animation-delay: 0s;
-  animation-name: contactIn;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-play-state: running;
-  animation-duration: 3.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: none;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-}
-
-@keyframes contactIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-  }
-}
-
-.contact-mail-info {
-  font-size: 1.5em;
-  font-family: nexa;
-  margin-left: 1.8em;
-  margin-top: -1.3em;
-  color: #ffffff;
-  width: fit-content;
-  gap: 1em;
-}
 
 .contact-mail:hover .contact-image {
   color: #0aff9d;
@@ -621,22 +592,14 @@ body ::selection {
   text-decoration: none;
 }
 
-.contact-image {
-  color: #ffff;
-  opacity: 0.5;
-  margin-left: 0.5em;
-}
 
 .contact-image3 {
   color: #ffff;
   opacity: 0.3;
+  transition: color 0.3s;
+  width: 1.5em;
+  height: 1.5em;
   margin-left: 1em;
-}
-
-.contact-image2 {
-  color: #ffff;
-  opacity: 0.5;
-  margin-left: 0em;
 }
 
 .header-icons :hover {
@@ -653,205 +616,9 @@ body ::selection {
 
 .contact-mail a {
   text-decoration: none;
-}
-
-.Education-title {
-  color: #ffff;
-  margin-left: 5.3em;
-  font-weight: 900;
-  font-size: 3.9em;
-  padding-top: 1.8em;
-  padding-bottom: 1em;
-
-  animation: EducationIn 0.9s ease;
-  animation-duration: 1.5s;
-  animation-name: EducationIn;
-  animation-delay: 0s;
-  animation-fill-mode: none;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-timing-function: ease;
-  animation-timeline: auto;
-  animation-play-state: running;
-  animation-range-start: normal;
-  animation-range-end: normal;
-}
-
-@keyframes EducationIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-70px);
-  }
-  100% {
-    opacity: 100;
-  }
-}
-
-.Education-title span {
-  color: #0aff9d;
-  font-size: 1.3em;
-  font-weight: 900;
-  margin-left: -0.23em;
-}
-.Institution-name {
-  padding-left: 16em;
-  font-size: 1.3em;
-  font-weight: bold;
-  float: left;
-
-  animation: institutionNameIn 0.9s ease;
-  animation-name: institutionNameIn;
-  animation-duration: 3.5s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-timeline: auto;
-}
-
-@keyframes institutionNameIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100;
-  }
-}
-
-.college {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  padding: 1em;
-}
-
-.duration {
-  padding-left: 59em;
-  font-size: 1.2em;
-
-  animation: durationIn 0.9s ease;
-  animation-duration: 3.5s;
-  animation-name: durationIn;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-play-state: running;
-  animation-timeline: auto;
-}
-
-@keyframes durationIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100;
-  }
-}
-.course {
-  padding-left: 14em;
-  font-weight: bold;
-  color: #0aff9d;
-  font-size: 1.5em;
-  float: left;
-  margin-top: -0.6em;
-
-  animation: courseIn 0.9s ease;
-  animation-name: courseIn;
-  animation-duration: 3.5s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-timeline: auto;
-}
-
-@keyframes courseIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100;
-  }
-}
-
-.place {
-  font-size: 1.2em;
-  padding-left: 59em;
-  margin-top: -0.6em;
-
-  animation: placeIn 0.9s ease;
-  animation-duration: 3.5s;
-  animation-name: placeIn;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-play-state: running;
-  animation-timeline: auto;
-}
-
-@keyframes placeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100;
-  }
-}
-
-.college span {
-  font-size: 0.7em;
-  color: #ffffff;
-  margin-top: -2.2em;
-  margin-left: 0.8em;
-  display: flex;
-}
-
-.college span6 {
-  font-size: 0.68em;
-  color: #ffffff;
-  margin-top: -1.5em;
-  margin-left: 4.7em;
-  display: flex;
-}
-
-.college span3 {
-  font-size: 0.68em;
-  color: #ffffff;
-  margin-top: -1.5em;
-  margin-left: 3.9em;
-  display: flex;
-}
-
-.college span4 {
-  font-size: 0.7em;
-  color: #ffffff;
-  margin-top: -2.2em;
-  margin-left: 0.8em;
-  display: flex;
-}
-
-.college span5 {
-  font-size: 0.7em;
-  color: #ffffff;
-  margin-top: -2.2em;
-  margin-left: 5.5em;
-  display: flex;
+  color: #ffff;
 }
 
 .section-line {
@@ -864,30 +631,13 @@ body ::selection {
   margin-left: 4em;
 }
 
-.education {
-  padding-bottom: 6em;
-}
-
-.Skill-title {
-  color: #ffff;
-  margin-left: 5.3em;
+.project-title {
+  color: #fff;
+  text-align: left;
+  margin-left: 18%;
   font-weight: 900;
-  font-size: 3.9em;
-  padding-top: 1.8em;
-  padding-bottom: 0.5em;
-
+  font-size: 3.5em;
   animation: SkillTitleIn 0.9s ease;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: SkillTitleIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0s;
 }
 
 @keyframes SkillTitleIn {
@@ -895,584 +645,413 @@ body ::selection {
     opacity: 0;
     transform: translateX(-70px);
   }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.project-title span {
+  color: #0aff9d;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+.main-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2em;
+  margin: 0 auto;
+  padding: 2em 5%;
+  max-width: 1300px;
+}
+
+.project-card {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 450px;
+  margin: 20px auto;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: nexa;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-thumbnail {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-thumbnail img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.project-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.project-info h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.learn-more-btn {
+  background-color: #0aff9d;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #00e889;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #333;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  color: #fff;
+  font-family: nexa;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #fff;
+  cursor: pointer;
+}
+
+.project-links {
+  margin-top: 20px;
+}
+
+.project-links a {
+  color: #0aff9d;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+.modal img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.modal.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
   100% {
     opacity: 1;
   }
 }
 
-.Skill-title span {
+
+
+.experience-title {
+  color: #ffff;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  font-size: 3.5em;
+
+  animation: experienceIn 0.9s ease;
+  animation-duration: 1.5s;
+  animation-name: experienceIn;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: ease;
+  animation-timeline: auto;
+  animation-play-state: running;
+  animation-range-start: normal;
+  animation-range-end: normal;
+}
+
+@keyframes experienceIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+.experience-title span {
   color: #0aff9d;
   font-size: 1.3em;
   font-weight: 900;
   margin-left: -0.23em;
 }
 
-.skills {
-  color: #ffffff;
-  font-size: 1.5em;
-  align-items: center;
-  text-align: center;
-  font-weight: 900;
+@media (max-width: 768px) {
+  .experience-title {
+    font-size: 2.5em;
+    margin-left: 12%;
+  }
+}
+
+
+.experience-section {
+  background-color: #000;
+  color: #fff;
+  padding: 40px;
+}
+
+.experience-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
   font-family: nexa;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 90%;
+}
+
+.experience-header {
   display: flex;
-  margin-left: 8em;
-  padding-bottom: 0.8em;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.skills span {
-  margin-right: 14em;
-  margin-left: 6.2em;
-
-  animation: SkillsTextIn 0.9s ease;
-  animation-duration: 3.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: SkillsTextIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0s;
+.company-name {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
-@keyframes SkillsTextIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.experience-time {
+  font-size: 1em;
+  color: #aaa;
 }
 
-.skill-box {
-  background: #777474;
-  width: 0.8em;
-  height: 0.8em;
+.job-title {
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #00ff00;
+}
+
+.job-location {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.job-description {
+  font-size: 1em;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background-color: #222;
+  color: #0aff9d;
+  padding: 8px 12px;
   border-radius: 5px;
-  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .company-name {
+    margin-left: 5%;
+  }
+
+  .experience-time {
+    margin-right: 5%;
+  }
+
+  .job-title {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .job-location {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .job-description {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+
+.skills-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0.5em;
-
-  animation: skillBoxIn 0.9s ease;
-  animation-delay: 0.1s;
-  animation-name: skillBoxIn;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-play-state: running;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: none;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-@keyframes skillBoxIn {
-  0% {
-    transform: translateX(-70px);
-    opacity: 0;
-  }
-  100% {
-  }
+.skill {
+  background-color: #333;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  color: #fff;
 }
 
-.skill-box2 {
-  background: #777474;
-  width: 0.8em;
-  height: 0.8em;
-  border-radius: 5px;
-  opacity: 0.2;
+.contact-mail {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-left: 0.5em;
-
-  animation: skillBoxIn 0.9s ease;
-  animation-delay: 0.1s;
-  animation-name: skillBoxIn;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-play-state: running;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: none;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
+  transition: transform 0.3s ease;
+  color: #ffff;
+  margin-top: -0.5em;
+  flex-wrap: wrap;
 }
 
-.skill-box3 {
-  background: #777474;
-  width: 0.8em;
-  height: 0.8em;
-  border-radius: 5px;
-  opacity: 0.35;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0.5em;
-
-  animation: skillBoxIn 0.9s ease;
-  animation-delay: 0.1s;
-  animation-name: skillBoxIn;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-play-state: running;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: none;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
+.contact-mail:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.skills span2 {
-  font-size: 0.8em;
-  opacity: 0.5;
-  margin-left: 1em;
-  animation: counter 5s forwards alternate ease-in-out;
-  counter-reset: num var(--num);
+.contact-image {
+  color: #ffff;
+  opacity: 0.3;
+  transition: color 0.3s;
+  width: 1.8em;
+  height: 1.8em;
+  margin-right: 0.5em;
 }
 
-@property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-span2::after {
-  content: counter(num);
+.contact-mail:hover .contact-image {
+  color: #0aff9d;
+  opacity: 0.8;
 }
 
-@keyframes counter {
-  from {
-    --num: 0;
+.contact-mail:hover .contact-mail-info {
+  color: #0aff9d;
+  text-decoration: none;
+}
+
+
+.contact-mail-info {
+  color: #fff;
+  font-size: 1em;
+  font-family: nexa;
+  margin-left: 1.8em;
+  width: fit-content;
+  gap: 1em;
+}
+
+@media (max-width: 768px) {
+
+  .contact-description,
+  .contact-info {
+    margin-left: 20%;
   }
-  to {
-    --num: 68;
+
+  .contact-mail {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    margin-left: 10%;
   }
-}
 
-.skills span2-1 {
-  font-size: 0.8em;
-  opacity: 0.5;
-  margin-left: 1em;
-  animation: counter1 5s forwards alternate ease-in-out;
-  counter-reset: num1 var(--num1);
-}
-
-@property --num1 {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-span2-1::after {
-  content: counter(num1);
-}
-
-@keyframes counter1 {
-  from {
-    --num1: 0;
+  .contact-image {
+    margin-left: auto;
+    margin-bottom: 0;
+    width: 1.5em;
+    height: 1.5em;
   }
-  to {
-    --num1: 50;
-  }
+
 }
 
-.skills span2-2 {
-  font-size: 0.8em;
-  opacity: 0.5;
-  margin-left: 1em;
-  animation: counter2 5s forwards alternate ease-in-out;
-  counter-reset: num2 var(--num2);
-}
 
-@property --num2 {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-span2-2::after {
-  content: counter(num2);
-}
 
-@keyframes counter2 {
-  from {
-    --num2: 0;
-  }
-  to {
-    --num2: 45;
-  }
-}
 
-.skills span2-3 {
-  font-size: 0.8em;
-  opacity: 0.5;
-  margin-left: 1em;
-  animation: counter3 5s forwards alternate ease-in-out;
-  counter-reset: num3 var(--num3);
-}
-
-@property --num3 {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-span2-3::after {
-  content: counter(num3);
-}
-
-@keyframes counter3 {
-  from {
-    --num3: 0;
-  }
-  to {
-    --num3: 89;
-  }
-}
-.skills span2-4 {
-  font-size: 0.8em;
-  opacity: 0.5;
-  margin-left: 1em;
-  animation: counter4 5s forwards alternate ease-in-out;
-  counter-reset: num4 var(--num4);
-}
-
-@property --num4 {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-span2-4::after {
-  content: counter(num4);
-}
-
-@keyframes counter4 {
-  from {
-    --num4: 0;
-  }
-  to {
-    --num4: 83;
-  }
-}
-
-.skills span2-5 {
-  font-size: 0.8em;
-  opacity: 0.5;
-  margin-left: 1em;
-  animation: counter5 5s forwards alternate ease-in-out;
-  counter-reset: num5 var(--num5);
-}
-
-@property --num5 {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-span2-5::after {
-  content: counter(num5);
-}
-
-@keyframes counter5 {
-  from {
-    --num5: 0;
-  }
-  to {
-    --num5: 94;
-  }
-}
-
-.skills span2-6 {
-  font-size: 0.8em;
-  opacity: 0.5;
-  margin-left: 1em;
-  animation: counter6 5s forwards alternate ease-in-out;
-  counter-reset: num6 var(--num6);
-}
-
-@property --num6 {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-span2-6::after {
-  content: counter(num6);
-}
-
-@keyframes counter6 {
-  from {
-    --num6: 0;
-  }
-  to {
-    --num6: 96;
-  }
-}
-
-.skills span1 {
-  margin-left: 6.1em;
-  padding-right: 14.9em;
-
-  animation: SkillsTextIn 0.9s ease;
-  animation-duration: 3.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: SkillsTextIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0s;
-}
-
-@keyframes SkillsTextIn {
+@keyframes contactIn {
   0% {
     opacity: 0;
   }
-  100% {
-    opacity: 1;
+
+  100% {}
+}
+
+
+@media (max-width: 768px) {
+  #modal1 .modal-dialog {
+    max-width: 90%;
   }
 }
 
-.skills span3 {
-  margin-left: 6em;
-  padding-right: 11.78em;
-
-  animation: SkillsTextIn 0.9s ease;
-  animation-duration: 3.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: SkillsTextIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0s;
-}
-
-@keyframes SkillsTextIn {
-  0% {
-    opacity: 0;
+@media (max-width: 576px) {
+  #modal1 .modal-dialog {
+    max-width: 95%;
   }
-  100% {
-    opacity: 1;
-  }
-}
-
-.skills span4 {
-  margin-left: 6em;
-  padding-right: 10.8em;
-
-  animation: SkillsTextIn 0.9s ease;
-  animation-duration: 3.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: SkillsTextIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0s;
-}
-
-@keyframes SkillsTextIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.main-skills {
-  padding-bottom: 6em;
-}
-
-.skills span5 {
-  margin-left: 6em;
-  padding-right: 7.15em;
-
-  animation: SkillsTextIn 0.9s ease;
-  animation-duration: 3.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: SkillsTextIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0s;
-}
-
-@keyframes SkillsTextIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.skills span6 {
-  margin-left: 6em;
-  padding-right: 10em;
-
-  animation: SkillsTextIn 0.9s ease;
-  animation-duration: 3.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: SkillsTextIn;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation-delay: 0s;
-}
-
-@keyframes SkillsTextIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.skills span7 {
-  font-size: 0.8em;
-  opacity: 0.5;
-  margin-left: 0.1em;
-}
-
-.body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  background: #000;
-  overflow: hidden;
-  /* opacity: 1 */
-  ;
-}
-
-.glowing {
-  position: relative;
-  min-width: 700px;
-  height: 550px;
-  margin: -150px;
-  transform-origin: right;
-  animation: colorChange 15s linear infinite;
-}
-
-.glowing:nth-child(even) {
-  transform-origin: left;
-}
-
-@keyframes colorChange {
-  0% {
-    filter: hue-rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    filter: hue-rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.glowing span {
-  position: absolute;
-  top: calc(80px * var(--i));
-  left: calc(80px * var(--i));
-  bottom: calc(80px * var(--i));
-  right: calc(80px * var(--i));
-}
-
-.glowing span::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -8px;
-  width: 15px;
-  height: 15px;
-  background: #f00;
-  border-radius: 50%;
-}
-
-.glowing span:nth-child(3n + 1)::before {
-  background: rgba(134, 255, 0, 1);
-  box-shadow: 0 0 20px rgba(134, 255, 0, 1), 0 0 40px rgba(134, 255, 0, 1),
-    0 0 60px rgba(134, 255, 0, 1), 0 0 80px rgba(134, 255, 0, 1),
-    0 0 0 8px rgba(134, 255, 0, 0.1);
-}
-
-.glowing span:nth-child(3n + 2)::before {
-  background: rgba(255, 214, 0, 1);
-  box-shadow: 0 0 20px rgba(255, 214, 0, 1), 0 0 40px rgba(255, 214, 0, 1),
-    0 0 60px rgba(255, 214, 0, 1), 0 0 80px rgba(255, 214, 0, 1),
-    0 0 0 8px rgba(255, 214, 0, 0.1);
-}
-
-.glowing span:nth-child(3n + 3)::before {
-  background: rgba(0, 226, 255, 1);
-  box-shadow: 0 0 20px rgba(0, 226, 255, 1), 0 0 40px rgba(0, 226, 255, 1),
-    0 0 60px rgba(0, 226, 255, 1), 0 0 80px rgba(0, 226, 255, 1),
-    0 0 0 8px rgba(0, 226, 255, 0.1);
-}
-
-.glowing span:nth-child(3n + 1) {
-  animation: animate 25s alternate infinite;
-}
-
-.glowing span:nth-child(3n + 2) {
-  animation: animate-reverse 18s alternate infinite;
-}
-
-.glowing span:nth-child(3n + 3) {
-  animation: animate 25s alternate infinite;
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(180deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-reverse {
-  0% {
-    transform: rotate(360deg);
-  }
-
-  50% {
-    transform: rotate(180deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
