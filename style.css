@@ -168,6 +168,7 @@ body ::selection {
 
 .social-icons .icon {
   margin-right: 15px;
+
 }
 
 .social-icons {
@@ -196,10 +197,10 @@ body ::selection {
   color: #06da85;
 }
 
-
+ 
 .resume-box:hover {
-  font-weight: 900;
   color: #0aff9d;
+  font-weight: 500;
 }
 
 
@@ -597,8 +598,8 @@ body ::selection {
   color: #ffff;
   opacity: 0.3;
   transition: color 0.3s;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.8em;
+  height: 1.8em;
   margin-left: 1em;
 }
 
@@ -904,7 +905,7 @@ body ::selection {
 }
 
 .job-description {
-  font-size: 1em;
+  font-size: 1.2em;
   margin-bottom: 15px;
   color: #ddd;
 }
