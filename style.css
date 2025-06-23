@@ -287,7 +287,7 @@ body ::selection {
   color: rgb(255, 255, 255);
   line-height: 1.8;
   text-align: left;
-  font-size: 0.9em;
+  font-size: 1.1em;
   max-width: 100%;
   position: relative;
   animation: DiscriptionIn 0.9s ease;
