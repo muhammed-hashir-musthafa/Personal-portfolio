@@ -197,7 +197,7 @@ body ::selection {
   color: #06da85;
 }
 
- 
+
 .resume-box:hover {
   color: #0aff9d;
   font-weight: 500;
@@ -697,7 +697,8 @@ body ::selection {
 .project-thumbnail img {
   width: 100%;
   max-width: 400px;
-  height: auto;
+  height: 250px;
+  object-fit: cover;
   border-radius: 10px;
   transition: opacity 0.3s ease;
 }
@@ -786,6 +787,7 @@ body ::selection {
 .modal img {
   display: block;
   margin: 0 auto;
+  height: auto;
   width: 100%;
   max-width: 500px;
   margin-bottom: 20px;
